@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+
+    <link rel="stylesheet" href="css/firstlogin.css" />
+    <link rel="stylesheet" href="js/script.js" />
+  </head>
+  <body>
+    <div class="layout">
+      <div class="container">
+        <!-- 로고 섹션 -->
+        <div class="logo">
+          <div class="logo-wrap">
+            <img src="assets/icons/rabbit.png" alt="guideme 로고" />
+          </div>
+          <div class="text">
+            <h1 class="logo-name">Guide Me</h1>
+            <p class="logo-sub">소리알림 서비스</p>
+          </div>
+        </div>
+
+        <!-- 입력 폼 -->
+        <div class="field-group">
+          <div class="field">
+            <span class="field-label">이메일 or 아이디</span>
+            <input
+              class="field-input"
+              type="text"
+              placeholder="숫자,알문,특수키호(,_)5~13자리"
+            />
+          </div>
+
+          <div class="field">
+            <span class="field-label">비밀번호</span>
+            <input
+              class="field-input"
+              type="password"
+              placeholder="숫자,영문,특수문시 포함 8자리 이상"
+            />
+          </div>
+
+          <div class="field">
+            <span class="field-label">비밀번호 확인</span>
+            <input class="field-input" type="password" placeholder="" />
+          </div>
+
+          <div class="field">
+            <span class="field-label">닉네임</span>
+            <input class="field-input" type="text" placeholder="귄독자123" />
+          </div>
+        </div>
+
+        <!-- 약관 동의 -->
+        <div class="agree-group">
+          <div class="agree-row">
+            <div class="check-box checked">
+              <svg width="11" height="9" viewBox="0 0 11 9" fill="none">
+                <path
+                  d="M1 4L4 7.5L10 1"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <span class="agree-label">이용약관 동의</span>
+          </div>
+
+          <div class="agree-row">
+            <div class="check-box checked">
+              <svg width="11" height="9" viewBox="0 0 11 9" fill="none">
+                <path
+                  d="M1 4L4 7.5L10 1"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <span class="agree-label">개인정보 처리방침 동의</span>
+          </div>
+        </div>
+
+        <!-- 회원가입 버튼 -->
+        <button class="submit-btn">회원가입</button>
+      </div>
+    </div>
+  </body>
+</html>

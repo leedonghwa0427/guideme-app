@@ -143,35 +143,28 @@ img {
   width: 100%;
   object-fit: cover;
 }
-
-/* Component Token */
 /* Layout */
 .layout {
-  position: relative;
-  width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
 .container {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  max-width: var(--container-max);
-  flex: 1;
-  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  display: flex;
   /* background-color: #d4d4d4; */
 }
 
-/* 로고 */
 .logo {
   display: flex;
-  margin-top: 6rem;
   flex-direction: column;
   align-items: center; /* 가로 중앙 */
   justify-content: center; /* 세로 중앙 */
+  margin: var(--font-8xl);
 }
 
 .logo-wrap {
@@ -186,155 +179,59 @@ img {
   position: relative;
 }
 
-.text {
-  gap: var(--spacing-8);
-  padding: 8px;
-  text-align: center;
-}
-
 .logo-name {
-  font-size: var(--font-6xl);
-  font-weight: 900;
+  display: flex;
   color: var(--purple-400);
-  letter-spacing: -0.3px;
-  margin-bottom: 6px;
-  font-family: Arial, sans-serif;
+  justify-content: center;
 }
 
 .logo-sub {
-  font-size: var(--font-sm);
+  display: flex;
   color: var(--purple-900);
-  font-weight: 400;
-  margin-bottom: 2rem;
-  font-family: Arial, sans-serif;
-}
-
-/* 구글 애플 페이스북 */
-.social-row {
-  margin: 1.2rem;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 24px;
 }
 
-.social-btn {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-.social-btn img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  display: block;
-}
-
-/* 구글 - 흰 배경 + 테두리 */
-.social-btn.google {
-  background: #f9f9f9;
-  border: 1.5px solid #e5e5e5;
-}
-
-/* 애플 - 검정 배경 */
-.social-btn.apple {
-  background: #000;
-}
-
-/* 페이스북 - 파란 배경 */
-.social-btn.facebook {
-  background: #3d4da6;
-}
-/* 폼 섹션 */
-.divider {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 1.2rem;
-  margin-bottom: 1.2rem;
-  color: #ccc;
-  font-size: 13px;
-}
-.divider::before,
-.divider::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: #eee;
-}
-
+/* 입력 필드 */
 .field-group {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1.5px solid #eee;
+  border-top: 1px solid #eee;
 }
 .field {
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 36px;
   padding: 14px 0;
-  border-bottom: 1px solid #f0f0f0;
-}
-.field:last-child {
-  border-bottom: none;
-}
-.field-input {
-  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  gap: 10px;
 }
 .field-label {
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  min-width: 72px;
+  flex-shrink: 0;
 }
-
-.field-email {
-  transform: translateX(12px);
-  justify-content: flex-start;
-  display: flex;
+.field-input {
+  flex: 1;
   border: none;
   outline: none;
-  font-size: 14px;
-  color: var(--gray-100);
+  font-size: 13px;
+  color: #aaa;
   background: transparent;
-  font-family: inherit;
-}
-.field-pw {
-  justify-content: flex-start;
-  display: flex;
-  border: none;
-  outline: none;
-  font-size: 14px;
-  color: var(--gray-100);
-  background: transparent;
-  font-family: inherit;
-}
-.eye-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  color: var(--gray-350);
-  display: flex;
-  align-items: center;
 }
 
-.check-row {
+/* 약관 동의 */
+.agree-group {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 1.2rem 0 1.6rem;
+}
+.agree-row {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin: 14px 0 1.4rem;
 }
 .check-box {
   width: 18px;
@@ -346,59 +243,21 @@ img {
   justify-content: center;
   flex-shrink: 0;
   cursor: pointer;
-  transition: background 0.15s;
 }
-.check-label {
+.agree-label {
   font-size: 13px;
   color: #555;
 }
 
-.login-btn {
-  display: flex;
-  justify-content: center;
+/* 회원가입 버튼 */
+.submit-btn {
   width: 100%;
   padding: 15px;
-  background: var(--purple-400);
+  background: #6c5ce7;
   border: none;
   border-radius: 16px;
   font-size: 16px;
   font-weight: 700;
   color: #fff;
   cursor: pointer;
-  font-family: inherit;
-  margin-bottom: 1rem;
-  transition:
-    opacity 0.15s,
-    transform 0.15s;
-}
-.login-btn:hover {
-  opacity: 0.9;
-}
-
-.find-link {
-  display: flex;
-  justify-content: center;
-  font-size: 13px;
-  color: var(--gray-200);
-  cursor: pointer;
-  text-decoration: none;
-}
-.find-link:hover {
-  color: var(--gray-500);
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    padding: 0 24px;
-  }
-  .card-container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-20);
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .container {
-    padding: 0 40px;
-  }
 }

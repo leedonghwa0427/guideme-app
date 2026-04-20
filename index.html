@@ -8,9 +8,98 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
   </head>
+
   <body>
     <div class="layout">
-      <div class="outlet"></div>
+      <div class="container">
+        <!-- 로고 섹션 -->
+        <div class="logo">
+          <div class="logo-wrap">
+            <img src="assets/icons/rabbit.png" alt="guideme 로고" />
+          </div>
+          <div class="text">
+            <h1 class="logo-name">Guide Me</h1>
+            <p class="logo-sub">안전한 일상을 위하여</p>
+          </div>
+        </div>
+
+        <!-- 소셜 로그인 섹션 -->
+        <div class="social-row">
+          <button class="social-btn google">
+            <img src="assets/icons/google.png" alt="Google" />
+          </button>
+
+          <button class="social-btn apple">
+            <img src="assets/icons/apple.png" alt="Apple" />
+          </button>
+
+          <button class="social-btn facebook">
+            <img src="assets/icons/facebook.png" alt="Facebook" />
+          </button>
+        </div>
+
+        <div class="divider">또는</div>
+
+        <div class="field-group">
+          <div class="field">
+            <span class="field-input">이메일</span>
+            <input
+              class="field-email"
+              type="email"
+              placeholder="user@example.com"
+            />
+          </div>
+
+          <div class="field">
+            <span class="field-label"> 비밀번호 </span>
+            <input
+              class="field-pw"
+              type="password"
+              placeholder="••••••"
+              id="pw"
+            />
+            <button class="eye-btn" onclick="togglePw()">
+              <svg
+                id="eye-icon"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+              >
+                <path
+                  d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8
+                 a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1
+                 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19
+                 m-6.72-1.07a3 3 0 1 1-4.24-4.24"
+                />
+                <line x1="1" y1="1" x2="23" y2="23" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="check-row">
+          <div class="check-box" id="chk" onclick="toggleCheck()">
+            <svg width="11" height="9" viewBox="0 0 11 9" fill="none">
+              <path
+                d="M1 4L4 7.5L10 1"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <span class="check-label">로그인 상태 유지</span>
+        </div>
+
+        <button class="login-btn">로그인</button>
+        <a class="find-link">아이디/비밀번호 찾기</a>
+
+        <footer class="footer"></footer>
+      </div>
     </div>
   </body>
 </html>
