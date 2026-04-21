@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <link rel="stylesheet" href="css/home.css" />
+  <script src="js/script.js"></script>
+
+  <body>
+    <div class="container">
+      <!-- 상단 헤더 -->
+      <header class="header">
+        <i class="bell"><img src="assets/icons/bell.png" alt="알림 설정" /></i>
+        <i class="gear"
+          ><img src="assets/icons/setting.png" alt="기본 설정"
+        /></i>
+      </header>
+
+      <!-- 메인 영역 -->
+      <main class="container">
+        <!-- 배너 섹션 -->
+        <section class="banner">
+          <div class="banner-text">
+            <h1>Guide Me</h1>
+            <p>안녕하세요!</p>
+            <p>
+              사용자의 생활 환경과 상황에 맞춰<br />필요한 소리를 감지해
+              알려주는 가이드미 입니다
+            </p>
+            <div class="toggle-row">
+              <span>소리감지모드</span>
+              <input type="checkbox" checked />
+            </div>
+          </div>
+          <div class="banner-img">
+            <img src="assets/icons/rabbit.png" alt="로고 토끼" />
+          </div>
+        </section>
+
+        <!-- 툴바 -->
+        <section class="toolbar">
+          <button class="tool-btn">
+            <i class="fa-solid fa-wifi"></i>
+            <span>소리 감지</span>
+          </button>
+          <button class="tool-btn">
+            <i class="fa-regular fa-clock"></i>
+            <span>알림 설정</span>
+          </button>
+          <button class="tool-btn">
+            <i class="fa-regular fa-calendar"></i>
+            <span>일정 보기</span>
+          </button>
+        </section>
+
+        <!-- 추천 알림 -->
+        <section class="section">
+          <h2 class="section-title">추천 알림</h2>
+          <div class="grid">
+            <div class="card">
+              <i class="fa-regular fa-bell"
+                ><img src="assets/icons/bell.png" alt="초인종"
+              /></i>
+              <h3>초인종</h3>
+              <p>방문자 노크나 벨소리</p>
+            </div>
+            <div class="card">
+              <i class="fa-regular fa-face-smile"
+                ><img src="assets/icons/baby.png" alt="아기"
+              /></i>
+              <h3>아기</h3>
+              <p>아기 울음 패턴 분석</p>
+            </div>
+            <div class="card">
+              <i class="fa-solid fa-car"
+                ><img src="assets/icons/car.png" alt="자동차"
+              /></i>
+              <h3>자동차</h3>
+              <p>경적 또는 차량 소리</p>
+            </div>
+            <div class="card">
+              <i class="fa-solid fa-fire"
+                ><img src="assets/icons/fire.png" alt="화재 "
+              /></i>
+              <h3>불</h3>
+              <p>화재 경보음이나 대피상황</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 최근 알림 -->
+        <section class="section">
+          <h2 class="section-title">최근 알림</h2>
+          <div class="alert-item">
+            <i class="fa-solid fa-box"
+              ><img src="assets/icons/box.png" alt="택배"
+            /></i>
+            <span>택배 도착 예정</span>
+            <span class="time">time</span>
+          </div>
+        </section>
+      </main>
+
+      <!-- 하단 네비게이션 -->
+      <nav class="bottom-nav">
+        <button class="nav-btn active">
+          <i class="fa-solid fa-house"></i>
+          <span>홈</span>
+        </button>
+        <button class="nav-btn">
+          <i class="fa-regular fa-heart"></i>
+          <span>추천</span>
+        </button>
+        <button class="nav-btn">
+          <i class="fa-regular fa-calendar"></i>
+          <span>캘린더</span>
+        </button>
+        <button class="nav-btn">
+          <i class="fa-regular fa-user"></i>
+          <span>프로필</span>
+        </button>
+      </nav>
+    </div>
+  </body>
+</html>
