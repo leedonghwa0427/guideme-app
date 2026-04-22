@@ -3,31 +3,164 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/home.css" />
+    <script src="js/script.js"></script>
   </head>
-
-  <link rel="stylesheet" href="css/home.css" />
-  <script src="js/script.js"></script>
   <body>
     <div class="container">
-      <!-- 상단 헤더 -->
+      <!-- 헤더 -->
       <div class="header">
-        <span class="app-title">Guide Me</span>
-        <div class="header-icon">
-          <button class="icon-btn">
-            <img src="assets/icons/bell.png" alt="종 아이콘" />
-          </button>
-          <button class="icon-btn">
-            <img src="assets/icons/setting.png" alt="설정 아이콘" />
-          </button>
-        </div>
+        <button class="bell" title="알림">
+          <img src="assets/icons/bell.png" alt="종 버튼" />
+        </button>
+        <button class="setting" title="설정">
+          <img src="assets/icons/setting.png" alt="설정 버튼" />
+        </button>
       </div>
+      <span class="app-title">Guide Me</span>
       <!-- 스크롤 콘텐츠 -->
       <div class="scroll">
-        <!-- 홈페이지 -->
-        <div class="page-active" id="page-home">
-          <!-- 배너   -->
+        <!-- ───── 홈 페이지 ───── -->
+        <div class="page active" id="page-home">
+          <!-- 배너 -->
+          <div class="banner">
+            <div class="banner-top">
+              <div class="banner-text">
+                <h2>안녕하세요!</h2>
+                <p>
+                  사용자의 생활 환경과 상황에 맞춰<br />필요한 소리를 감지해
+                  알려주는 가이드미 입니다
+                </p>
+              </div>
+              <span class="mascot"
+                ><img src="assets/icons/rabbit.png" alt="로고 토끼"
+              /></span>
+            </div>
+          </div>
+
+          <!-- 소리감지모드 카드 -->
+          <div class="toggle-card">
+            <span class="toggle-label">소리감지모드</span>
+            <label class="toggle-wrap">
+              <input
+                type="checkbox"
+                class="toggle-input"
+                id="soundToggle"
+                checked
+              />
+              <span class="toggle-track"></span>
+            </label>
+          </div>
+
+          <!-- 빠른 기능 버튼 -->
+          <div class="quick-actions">
+            <button class="quick-btn">
+              <span class="icon"
+                ><img src="assets/icons/sensor.png" alt="감지"
+              /></span>
+              <span class="lbl">소리 감지</span>
+            </button>
+            <button class="quick-btn">
+              <span class="icon"
+                ><img src="assets/icons/alarm.png" alt="알림"
+              /></span>
+              <span class="lbl">알림 설정</span>
+            </button>
+            <button class="quick-btn">
+              <span class="icon"
+                ><img src="assets/icons/calender.png" alt="일정"
+              /></span>
+              <span class="lbl">일정 보기</span>
+            </button>
+          </div>
+
+          <!-- 추천 알림 -->
+          <p class="section-title">추천 알림</p>
+          <div class="alert-grid">
+            <div class="alert-card" onclick="toggleCard(this)">
+              <span class="icon"
+                ><img src="assets/icons/bell.png" alt=""
+              /></span>
+              <div>
+                <p class="name">초인종</p>
+                <p class="desc">방문자 노크나 벨소리</p>
+              </div>
+            </div>
+            <div class="alert-card" onclick="toggleCard(this)">
+              <span class="icon"
+                ><img src="assets/icons/baby.png" alt="아기"
+              /></span>
+              <div>
+                <p class="name">아기</p>
+                <p class="desc">아기 울음 패턴 분석</p>
+              </div>
+            </div>
+            <div class="alert-card" onclick="toggleCard(this)">
+              <span class="icon"
+                ><img src="assets/icons/car.png" alt="차"
+              /></span>
+              <div>
+                <p class="name">자동차</p>
+                <p class="desc">경적 또는 차량 소리</p>
+              </div>
+            </div>
+            <div class="alert-card" onclick="toggleCard(this)">
+              <span class="icon"
+                ><img src="assets/icons/fire.png" alt="불"
+              /></span>
+              <div>
+                <p class="name">화재</p>
+                <p class="desc">화재 경보음이나 대피상황</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 최근 알림 -->
+          <p class="section-title">최근 알림</p>
+          <div class="recent-list">
+            <div class="recent-item">
+              <span class="icon"
+                ><img src="assets/icons/box.png" alt="택배"
+              /></span>
+              <span class="lbl">택배 도착 예정</span>
+              <span class="time">10분 전</span>
+            </div>
+          </div>
         </div>
+        <!-- /page-home -->
+      </div>
+      <!-- /scroll -->
+
+      <!-- 하단 탭바 -->
+      <nav class="bottom-nav">
+        <button class="nav-btn active" onclick="switchTab('home', this)">
+          <span class="icon"><img src="assets/icons/home.png" alt="홈" /></span>
+          <span class="lbl">홈</span>
+        </button>
+        <button class="nav-btn" onclick="switchTab('recommend', this)">
+          <span class="icon"
+            ><img src="assets/icons/heart.png" alt="추천"
+          /></span>
+          <span class="lbl">추천</span>
+        </button>
+        <button class="nav-btn" onclick="switchTab('calendar', this)">
+          <span class="icon"
+            ><img src="assets/icons/calender.png" alt="캘린더"
+          /></span>
+          <span class="lbl">캘린더</span>
+        </button>
+        <button class="nav-btn" onclick="switchTab('profile', this)">
+          <span class="icon"
+            ><img src="assets/icons/profill.png" alt="프로필"
+          /></span>
+          <span class="lbl">프로필</span>
+        </button>
+      </nav>
     </div>
   </body>
 </html>
