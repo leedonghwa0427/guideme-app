@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recommendation</title>
+  </head>
+
+  <link rel="stylesheet" href="css/recommendation.css" />
+  <script src="js/script.js"></script>
+  <body>
+    <div class="container">
+      <!-- main 섹션 -->
+      <div class="main">
+        <h3 class="title">추천 알림</h3>
+        <div class="card-list">
+          <div class="house">
+            <img src="assets/images/houseimage.png" alt="집" />
+            <div class="content">
+              <div class="header">
+                <button class="add-btn" aria-label="House 카테고리 추가">
+                  +
+                </button>
+                <span class="category">House</span>
+              </div>
+              <h3 class="main">집 안에서 발생</h3>
+              <ul class="tags">
+                <li class="tag"># 안전</li>
+                <li class="tag"># 방문 / 케어</li>
+                <li class="tag"># 기기</li>
+              </ul>
+            </div>
+          </div>
+          <div class="night">
+            <img src="assets/images/nightimage.png" alt="잠자는 동안" />
+            <div class="content">
+              <div class="header">
+                <button class="add-btn" aria-label="Night 카테고리 추가">
+                  +
+                </button>
+                <span class="category">Night</span>
+              </div>
+              <h3 class="main">잠자는 동안</h3>
+              <ul class="tags">
+                <li class="tag"># 긴급</li>
+                <li class="tag"># 수면</li>
+                <li class="tag"># 자동</li>
+              </ul>
+            </div>
+          </div>
+          <div class="safe">
+            <img src="assets/images/safeimage.png" alt="사고 위험" />
+            <div class="content">
+              <div class="header">
+                <button class="add-btn" aria-label="Safe 카테고리 추가">
+                  +
+                </button>
+                <span class="category">Safe</span>
+              </div>
+              <h3 class="main">사고 위험</h3>
+              <ul class="tags">
+                <li class="tag"># 재난</li>
+                <li class="tag"># 방지</li>
+                <li class="tag"># 경고</li>
+                <li class="tag"># 즉각적</li>
+              </ul>
+            </div>
+          </div>
+          <div class="water">
+            <img src="assets/images/waterimage.png" alt="물 떨어짐" />
+            <div class="content">
+              <div class="header">
+                <button class="add-btn" aria-label="Water 카테고리 추가">
+                  +
+                </button>
+                <span class="category">Water</span>
+              </div>
+              <h3 class="main">물 떨어짐</h3>
+              <ul class="tags">
+                <li class="tag"># 빗소리</li>
+                <li class="tag"># 배관이상</li>
+                <li class="tag"># 누수</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button class="view-all-btn" type="button">전체보기 ></button>
+      </div>
+
+      <!-- 푸터 섹션 -->
+      <div class="footer">
+        <div class="user-recommend">
+          <img src="assets/icons/logo2.png" alt="로고" />
+          <div class="text">
+            <h3 class="text-main">사용자 추천</h3>
+            <p class="text-sub">
+              나의 루틴에 맟춘 알림을 원하시나요?<br />일상 속에서도 중요한
+              순간을 놓치지 마세요
+            </p>
+          </div>
+        </div>
+        <button class="time-add-btn">시간대별로 추가하기</button>
+      </div>
+    </div>
+  </body>
+</html>
