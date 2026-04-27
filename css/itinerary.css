@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Pretendard:wght@400;500;600&display=swap");
+
+/* Design Token */
+:root {
+  /* Refernce Token */
+  /* Color */
+  /* Primary */
+  --purple-100: #d7ccff;
+  --purple-200: #af99ff;
+  --purple-300: #8766ff;
+  --purple-400: #5f33ff;
+  --purple-500: #3700ff;
+  --purple-600: #2c00cc;
+  --purple-700: #210099;
+  --purple-800: #160066;
+  --purple-900: #0b0033;
+
+  /* Secondary */
+  --yellow-100: #fdffe2;
+  --yellow-200: #fbffaf;
+  --yellow-300: #f8ff7c;
+  --yellow-400: #f5ff49;
+  --yellow-500: #f3ff16;
+  --yellow-600: #d6e200;
+  --yellow-700: #a6af00;
+  --yellow-800: #757c00;
+  --yellow-900: #454900;
+  --yellow-1000: #151600;
+
+  /* Nutral */
+  --gray-50: #ffffff;
+  --gray-100: #e6e6e6;
+  --gray-150: #cccccc;
+  --gray-200: #b3b3b3;
+  --gray-250: #999999;
+  --gray-300: #808080;
+  --gray-350: #666666;
+  --gray-400: #4d4d4d;
+  --gray-450: #333333;
+  --gray-500: #1a1a1a;
+
+  /* Spacing */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-18: 18px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+
+  /* Font Size */
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 18px;
+  --font-xl: 20px;
+  --font-2xl: 22px;
+  --font-3xl: 24px;
+  --font-4xl: 28px;
+  --font-5xl: 30px;
+  --font-6xl: 32px;
+  --font-7xl: 34px;
+  --font-8xl: 36px;
+  --font-9xl: 38px;
+
+  /* System Token */
+  /* Background */
+  --color-bg-primary: var(--gray-50);
+  --color-bg-inverse: var(--gray-500);
+
+  /* Text */
+  --color-text-primary: var(--gray-500);
+  --color-text-inverse: var(--gray-50);
+
+  /* System */
+  /* Danger */
+  --danger-default: #e28484;
+  --danger-bg: #f6d6d6;
+  --danger-text: #cf3131;
+  /* Warning */
+  --warning-default: #816e37;
+  --warning-text: #681919;
+  --warning-bg: #dbcea9;
+  /* Success */
+  --success-default: #166145;
+  --success-bg: #baefdb;
+  --success-text: #0a6d48;
+  /* Warning */
+  --warning-default: #0057c9;
+  --warning-text: #c9e0ff;
+  --warning-bg: #002b63;
+  /* Information */
+  --information-default: #0057c9;
+  --information-bg: #c9e0ff;
+  --information-text: #002b63;
+
+  /* Accent */
+  --green-10: #d4e9d3;
+  --green-10: #b3d7b2;
+  --green-10: #93c690;
+  --green-10: #72b56e;
+  --green-10: #559f51;
+  --green-10: #437d40;
+
+  /* Resposive */
+  /* Layout Spacing */
+  --layout-padding-sm: 16px;
+  --layout-padding-md: 24px;
+
+  /* Container */
+  --container-max: 1280px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--gray-50);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 40px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 375px;
+  padding: 0 16px;
+}
+
+/* ---달력섹션--- */
+.cal {
+  border-radius: var(--spacing-16);
+  background: var(--purple-400);
+}
+
+/* 검색 바 */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: var(--gray-50);
+  border-radius: var(--spacing-20);
+  border: 1px solid var(--purple-400);
+  padding: 8px 14px;
+  margin-bottom: var(--spacing-16);
+  gap: var(--spacing-8);
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--gray-50);
+  font-size: var(--font-sm);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.search-input::placeholder {
+  color: var(--yellow-1000);
+}
+
+.search-btn {
+  background: var(--gray-50);
+  width: 12px;
+  height: 12px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.search-btn img {
+  width: 12px;
+  height: 12px;
+}
+
+/* 달력 그리드 */
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px 0;
+  margin: 12px 0;
+}
+
+.day-name {
+  color: var(--gray-50);
+  font-size: 12px;
+  text-align: center;
+}
+
+#cal-days {
+  display: contents;
+}
+
+.cal-day {
+  text-align: center;
+  font-size: var(--font-sm);
+  color: var(--gray-50);
+  padding: 8px 0;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: background 0.15s;
+}
+
+.cal-day.other-month {
+  color: var(--gray-300);
+}
+
+.cal-day.today {
+  background: var(--gray-50);
+  color: var(--purple-400);
+  font-weight: 700;
+}
+
+.cal-day:hover:not(.today) {
+  background: var(--gray-300);
+}
+
+/* Cancel / Ok */
+.cal-actions {
+  display: flex;
+  justify-content: flex-end;
+  transform: translate(-20px, -10px);
+  gap: var(--spacing-20);
+  padding: 8px 0 4px;
+}
+
+.action-btn {
+  background: transparent;
+  border: none;
+  font-size: var(--font-sm);
+  font-weight: 600;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.action-btn.cancel {
+  color: var(--gray-50);
+}
+.action-btn.ok {
+  color: var(--gray-50);
+}
+
+/* ── 일정 리스트 섹션 ── */
+.list-section {
+  flex: 1;
+  padding: 16px 16px 80px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.list-section::-webkit-scrollbar {
+  display: none;
+}
+
+.list-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 20px 18px;
+  box-shadow: 0 4px 24px rgba(95, 51, 255, 0.08);
+}
+
+/* 헤더 */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-16);
+}
+
+.greeting {
+  font-weight: 500;
+  font-size: var(--font-sm);
+  color: var(--gray-500);
+  margin-bottom: var(--spacing-4);
+}
+.greeting img {
+  filter: invert(31%) sepia(71%) saturate(7455%) hue-rotate(249deg)
+    brightness(100%) contrast(115%);
+  width: var(--spacing-16);
+  height: var(--font-sm);
+}
+
+.date {
+  font-size: var(--spacing-20);
+  font-weight: 700;
+  color: var(--purple-900);
+}
+
+.add-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--purple-400);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* 그룹 */
+.group {
+  margin-bottom: var(--spacing-20);
+}
+
+#cal-title.cal-title {
+  font-size: var(--font-2xl);
+  text-align: center;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--gray-50);
+}
+
+.day-title {
+  font-size: var(--font-lg);
+  font-weight: 700;
+  color: var(--purple-900);
+  margin-bottom: var(--spacing-12);
+  margin-top: var(--spacing-8);
+}
+
+/* 시간 */
+.time {
+  font-size: var(--spacing-12);
+  color: var(--purple-900);
+  margin-bottom: var(--spacing-8);
+  margin-top: var(--spacing-12);
+}
+.time.purple {
+  font-size: var(--spacing-12);
+  margin-bottom: var(--spacing-8);
+  margin-top: var(--spacing-12);
+  color: var(--purple-200);
+}
+
+/* 아이템 */
+.item {
+  background: var(--gray-100);
+  border-radius: var(--spacing-8);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-8);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.item.purple-bg {
+  background: var(--purple-100);
+}
+.item::last-child {
+  margin-bottom: 0;
+}
+
+.info .name {
+  font-size: var(--font-md);
+  font-weight: 600;
+  color: var(--purple-900);
+  margin-bottom: 3px;
+}
+
+.info .dose {
+  font-size: var(--font-sm);
+  color: var(--gray-300);
+}
+
+/* 체크 버튼 */
+.check {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px dashed var(--purple-400);
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+
+.check.checked {
+  background: var(--purple-400);
+  border: 2px solid var(--purple-400);
+}
+
+/* ---하단 네비게이션--- */
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 375px;
+  background: var(--gray-50);
+  border-top: 1px solid #9f9f9f;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0 16px;
+}
+
+.nav-item {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-4);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-item span {
+  font-size: var(--font-sm);
+  color: var(--gray-500);
+}
+
+.nav-item.active span,
+.nav-item .active-text {
+  color: var(--purple-400);
+  font-weight: 600;
+}
+
+.nav-item img {
+  width: 20px;
+  height: 20px;
+}

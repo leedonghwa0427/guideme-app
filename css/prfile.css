@@ -111,7 +111,6 @@
 }
 
 * {
-  padding: 70px 20px 0;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -120,181 +119,62 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--gray-50);
-}
-
-.container {
-  margin: 44px auto;
-  max-width: 375px;
-  max-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* main 섹션 */
-.main {
-  flex: 1;
-  margin: 0 8px;
-}
-
-.title {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--purple-900);
-}
-
-/* 카드 리스트 */
-.card-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.card-list > div {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 0;
-}
-
-/* 썸네일 이미지 */
-.card-list > div img {
-  width: 103px;
-  height: 82px;
-  border-radius: var(--spacing-8);
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-/* 텍스트 */
-.content {
-  flex: 1;
-  min-width: 0;
-}
-
-/* 버튼, 카테고리 */
-.header {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  margin-bottom: var(--spacing-4);
-}
-
-.add-btn {
-  width: 20px;
-  height: 20px;
-  border-radius: 1.5px;
-  border: none;
-  background: var(--gray-100);
-  font-size: var(--spacing-16);
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  flex-shrink: 0;
-  padding: 0;
-  font-size: var(--font-xl);
-  color: var(--information-default);
-}
-
-.category {
-  font-size: var(--font-md);
-  margin-left: var(--spacing-4);
-  font-weight: 600;
-}
-
-/* 카드메인 타이틀 */
-.content .main h3 {
-  font-size: var(--font-lg);
-  font-weight: 600;
-  color: var(--purple-900);
-}
-
-/* 태그 목록 */
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-4);
-}
-
-.tag {
-  font-size: var(--font-sm);
-  font-weight: 500;
-  color: var(--gray-300);
-}
-
-/* 전체보기 버튼 */
-.view-all-btn {
-  display: block;
-  width: 100%;
-  padding: 8px 0;
-  background: transparent;
-  border: 1px solid var(--gray-100);
-  border-radius: var(--spacing-8);
-}
-
-/* 푸터 : 사용자 추천 */
-.footer {
-  background: var(--purple-400);
-  flex-direction: column;
-  display: flex;
-  margin-top: 24px;
-}
-.user-recommend {
-  margin-bottom: -1px;
-  padding: 12px 12px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  gap: var(--spacing-8);
-}
-
-/* 배경 장식 토끼 로고 */
-
-.footer img {
-  transform: translateY(60px);
-  align-self: flex-end; /* 아래로 */
-  width: 60px;
-  height: 60px;
-}
-
-.text {
-  gap: 6px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  z-index: 1;
-  min-width: 0;
-}
-
-.text-main {
-  z-index: 0;
-  font-size: var(--font-xl);
-  font-weight: 700;
-  color: var(--gray-50);
-  white-space: nowrap;
-}
-
-.text-sub {
-  width: 300px;
-  text-align: right;
-  font-size: var(--font-sm);
-  color: var(--gray-50);
-}
-
-.btn {
-  display: flex;
-  justify-content: flex-end; /* 버튼 오른쪽 정렬 */
-  padding: 8px 18px;
-}
-.time-add-btn {
-  padding: 8px 12px;
   background: var(--gray-50);
-  border-radius: var(--spacing-8);
-  font-size: var(--font-sm);
-  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 375px;
+  min-height: 100vh;
+  background: var(--gray-50);
+  display: flex;
+  flex-direction: column;
+}
+
+/* 상단 헤더 */
+.logo {
+  font-size: var(--font-xl);
+  font-weight: 700;
+  color: var(--gray-50);
+}
+
+/* 프로필 */
+.profile {
+  background: var(--gray-50);
+  padding: 12px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logout {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--spacing-12);
+}
+
+.log-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: var(--yellow-1000);
   cursor: pointer;
-  margin-left: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 8px;
+}
+.logout img {
+  width: 16px;
+  height: 16px;
+}
+
+/* 이미지 박스 */
+.imgbox {
+  position: relative;
+  margin-bottom: var(--spacing-12);
 }

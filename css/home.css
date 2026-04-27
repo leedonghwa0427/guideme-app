@@ -341,10 +341,6 @@ body {
   color: var(--text);
   margin-bottom: 12px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> work-design-app
 /* 추천 알림 그리드 */
 .alert-grid {
   display: grid;
@@ -392,7 +388,6 @@ body {
   line-height: 1.4;
 }
 
-<<<<<<< HEAD
 /* 최근알림 리스트 */
 .recent-list {
   display: flex;
@@ -400,25 +395,17 @@ body {
   gap: 8px;
 }
 
-=======
-/* 최근 알림 서비스 */
->>>>>>> work-design-app
 .recent-item {
   background: var(--card);
   border: 1.5px solid var(--border);
   border-radius: 14px;
   padding: 12px 14px;
   display: flex;
-<<<<<<< HEAD
-=======
-  flex-direction: row;
->>>>>>> work-design-app
   align-items: center;
   gap: 10px;
   transition: border-color 0.2s;
 }
 
-<<<<<<< HEAD
 .recent-item:hover {
   border-color: var(--primary);
 }
@@ -443,23 +430,6 @@ body {
 .recent-item .time {
   font-size: var(--spacing-16);
   color: var(--gray-450);
-=======
-.recent-item .icon {
-  width: 44px;
-  height: 44px;
-  background: var(--gray-100);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.recent-item .icon img {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
->>>>>>> work-design-app
 }
 
 .recent-item .lbl {

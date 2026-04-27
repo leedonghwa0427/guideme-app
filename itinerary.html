@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ltinerary 일정</title>
+
+    <link rel="stylesheet" href="css/itinerary.css" />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <!-- 달력 섹션 -->
+      <div class="cal">
+        <!-- 검색바 -->
+        <div class="search-bar">
+          <input type="text" placeholder="MM/DD/YYYY" class="search-input" />
+          <button class="search-btn" aria-label="검색">
+            <img src="assets/icons/search.png" alt="돋보기 아이콘" />
+          </button>
+        </div>
+
+        <!-- 월 타이틀 -->
+        <div class="cal-title" id="cal-title">9월 10일 화요일</div>
+
+        <!-- 요일 헤더 -->
+        <div class="cal-grid">
+          <div class="day-name">월</div>
+          <div class="day-name">화</div>
+          <div class="day-name">수</div>
+          <div class="day-name">목</div>
+          <div class="day-name">금</div>
+          <div class="day-name">토</div>
+          <div class="day-name">일</div>
+          <!-- 날짜 -->
+          <div id="cal-days"></div>
+        </div>
+
+        <!-- Cancel / Ok -->
+        <div class="cal-actions">
+          <button class="action-btn cancel">Cancel</button>
+          <button class="action-btn ok">Ok</button>
+        </div>
+      </div>
+
+      <!-- 일정 리스트 섹션 -->
+      <div class="list-section">
+        <div class="list-card">
+          <div class="card">
+            <!-- 오늘 헤더 -->
+            <div class="header">
+              <div class="header-left">
+                <div class="greeting">
+                  <img src="assets/icons/heart.png" alt="하트" /> 오늘도 화이팅!
+                </div>
+                <div class="date">9월 10일 화요일 (오늘)</div>
+              </div>
+              <button class="add-btn" aria-label="일정 추가">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <rect x="7" y="2" width="2" height="12" rx="1" fill="white" />
+                  <rect x="2" y="7" width="12" height="2" rx="1" fill="white" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- 오늘 일정 -->
+            <div class="group">
+              <div class="time">오전 9:00</div>
+              <div class="item" onclick="toggleCheck(this)">
+                <div class="info">
+                  <div class="name">자누비아 (MSD)</div>
+                  <div class="dose">1정</div>
+                </div>
+                <button class="check checked" aria-label="체크">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path
+                      d="M2 7L5.5 10.5L12 3.5"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="item" onclick="toggleCheck(this)">
+                <div class="info">
+                  <div class="name">프로바이오틱스 (유산균)</div>
+                  <div class="dose">1포</div>
+                </div>
+                <button class="check" aria-label="체크">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path
+                      d="M2 7L5.5 10.5L12 3.5"
+                      stroke="#5f33ff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-dasharray="4 2"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="time">오후 16:00</div>
+              <div class="item" onclick="toggleCheck(this)">
+                <div class="info">
+                  <div class="name">아세트아미노펜 (두통약)</div>
+                  <div class="dose">1정</div>
+                </div>
+                <button class="check" aria-label="체크">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path
+                      d="M2 7L5.5 10.5L12 3.5"
+                      stroke="#5f33ff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-dasharray="4 2"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- 내일 일정 -->
+            <div class="day-title">9월 10일 수요일 (내일)</div>
+            <div class="group">
+              <div class="time purple">오전 9:00</div>
+              <div class="item purple-bg" onclick="toggleCheck(this)">
+                <div class="info">
+                  <div class="name">자누비아 (MSD)</div>
+                  <div class="dose">1정</div>
+                </div>
+                <button class="check" aria-label="체크">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path
+                      d="M2 7L5.5 10.5L12 3.5"
+                      stroke="#5f33ff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-dasharray="4 2"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="item purple-bg" onclick="toggleCheck(this)">
+                <div class="info">
+                  <div class="name">프로바이오틱스 (유산균)</div>
+                  <div class="dose">1정</div>
+                </div>
+                <button class="check" aria-label="체크">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path
+                      d="M2 7L5.5 10.5L12 3.5"
+                      stroke="#5f33ff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-dasharray="4 2"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 하단 네비게이션 -->
+      <nav class="nav">
+        <button class="nav-item">
+          <img src="assets/icons/home.png" alt="홈" />
+          <span>홈</span>
+        </button>
+        <button class="nav-item">
+          <img src="assets/icons/heart.png" alt="추천" />
+          <span>추천</span>
+        </button>
+        <button class="nav-item">
+          <img src="assets/icons/fillcalender.png" alt="캘린더" />
+          <span>캘린더</span>
+        </button>
+        <button class="nav-item">
+          <img src="assets/icons/profill.png" alt="프로필" />
+          <span>프로필</span>
+        </button>
+      </nav>
+    </div>
+    <script src="js/calendar.js"></script>
+  </body>
+</html>
