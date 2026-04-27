@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Pretendard:wght@400;500;600&display=swap");
+
+/* Design Token */
+:root {
+  /* Refernce Token */
+  /* Color */
+  /* Primary */
+  --purple-100: #d7ccff;
+  --purple-200: #af99ff;
+  --purple-300: #8766ff;
+  --purple-400: #5f33ff;
+  --purple-500: #3700ff;
+  --purple-600: #2c00cc;
+  --purple-700: #210099;
+  --purple-800: #160066;
+  --purple-900: #0b0033;
+
+  /* Secondary */
+  --yellow-100: #fdffe2;
+  --yellow-200: #fbffaf;
+  --yellow-300: #f8ff7c;
+  --yellow-400: #f5ff49;
+  --yellow-500: #f3ff16;
+  --yellow-600: #d6e200;
+  --yellow-700: #a6af00;
+  --yellow-800: #757c00;
+  --yellow-900: #454900;
+  --yellow-1000: #151600;
+
+  /* Nutral */
+  --gray-50: #ffffff;
+  --gray-100: #e6e6e6;
+  --gray-150: #cccccc;
+  --gray-200: #b3b3b3;
+  --gray-250: #999999;
+  --gray-300: #808080;
+  --gray-350: #666666;
+  --gray-400: #4d4d4d;
+  --gray-450: #333333;
+  --gray-500: #1a1a1a;
+
+  /* Spacing */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-18: 18px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+
+  /* Font Size */
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 18px;
+  --font-xl: 20px;
+  --font-2xl: 22px;
+  --font-3xl: 24px;
+  --font-4xl: 28px;
+  --font-5xl: 30px;
+  --font-6xl: 32px;
+  --font-7xl: 34px;
+  --font-8xl: 36px;
+  --font-9xl: 38px;
+
+  /* System Token */
+  /* Background */
+  --color-bg-primary: var(--gray-50);
+  --color-bg-inverse: var(--gray-500);
+
+  /* Text */
+  --color-text-primary: var(--gray-500);
+  --color-text-inverse: var(--gray-50);
+
+  /* System */
+  /* Danger */
+  --danger-default: #e28484;
+  --danger-bg: #f6d6d6;
+  --danger-text: #cf3131;
+  /* Warning */
+  --warning-default: #816e37;
+  --warning-text: #681919;
+  --warning-bg: #dbcea9;
+  /* Success */
+  --success-default: #166145;
+  --success-bg: #baefdb;
+  --success-text: #0a6d48;
+  /* Warning */
+  --warning-default: #0057c9;
+  --warning-text: #c9e0ff;
+  --warning-bg: #002b63;
+  /* Information */
+  --information-default: #0057c9;
+  --information-bg: #c9e0ff;
+  --information-text: #002b63;
+
+  /* Accent */
+  --green-10: #d4e9d3;
+  --green-10: #b3d7b2;
+  --green-10: #93c690;
+  --green-10: #72b56e;
+  --green-10: #559f51;
+  --green-10: #437d40;
+
+  /* Resposive */
+  /* Layout Spacing */
+  --layout-padding-sm: 16px;
+  --layout-padding-md: 24px;
+
+  /* Container */
+  --container-max: 1280px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--gray-50);
+  display: flex;
+  justify-content: center;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 375px;
+  min-height: 100vh;
+  background: var(--gray-50);
+  display: flex;
+  flex-direction: column;
+}
+
+/* 상단 헤더 */
+.logo {
+  font-size: var(--font-xl);
+  font-weight: 700;
+  color: var(--gray-50);
+}
+
+/* 프로필 */
+.profile {
+  background: var(--gray-50);
+  padding: 12px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logout {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--spacing-12);
+}
+
+.log-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: var(--yellow-1000);
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 8px;
+}
+.logout img {
+  width: 16px;
+  height: 16px;
+}
+
+/* 이미지 박스 */
+.imgbox {
+  position: relative;
+  margin-bottom: var(--spacing-12);
+}

@@ -1,55 +1,13 @@
-function togglePw() {
-  const pw = document.getElementById("pw");
-  const icon = document.getElementById("eye-icon");
-  if (pw.type === "password") {
-    pw.type = "text";
-    icon.innerHTML = `
-      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-      <circle cx="12" cy="12" r="3"/>`;
-  } else {
-    pw.type = "password";
-    icon.innerHTML = `
-      <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8
-               a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1
-               12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19
-               m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
-      <line x1="1" y1="1" x2="23" y2="23"/>`;
-  }
-}
-
-function toggleCheck() {
-  const chk = document.getElementById("chk");
-  const isChecked = chk.dataset.checked !== "false";
-  chk.dataset.checked = isChecked ? "false" : "true";
-  chk.style.background = isChecked ? "#ddd" : "#6c5ce7";
-}
-
-function toggleCheck(item) {
-  const btn = item.querySelector(".check");
-  const path = item.querySelector("path");
-  const isChecked = btn.classList.contains("checked");
-
-  if (isChecked) {
-    btn.classList.remove("checked");
-    path.setAttribute("stroke", "#5f33ff");
-    path.setAttribute("stroke-dasharray", "4 2");
-  } else {
-    btn.classList.add("checked");
-    path.setAttribute("stroke", "white");
-    path.removeAttribute("stroke-dasharray");
-  }
-}
-
 // 달력 날짜 렌더링
-const today = new Date(2024, 8, 10); // 9월 10일 기준
-const year = today.getFullYear();
-const month = today.getMonth();
+const caltoday = new Date(2024, 8, 10); // 9월 10일 기준
+const year = caltoday.getFullYear();
+const month = caltoday.getMonth();
 
 const days = ["일", "월", "화", "수", "목", "금", "토"];
-const weekDay = days[today.getDay()];
+const weekDay = days[caltoday.getDay()];
 
 document.getElementById("cal-title").textContent =
-  `${month + 1}월 ${today.getDate()}일 ${weekDay}요일`;
+  `${month + 1}월 ${caltoday.getDate()}일 ${weekDay}요일`;
 
 function renderCalendar() {
   const container = document.getElementById("cal-days");
@@ -73,9 +31,9 @@ function renderCalendar() {
   for (let d = 1; d <= daysInMonth; d++) {
     const el = document.createElement("div");
     el.className = "cal-day";
-    if (d === today.getDate()) el.classList.add("today");
+    if (d === caltoday.getDate()) el.classList.add("today");
     el.textContent = d;
-    el.addEventListener("click", () => selectDay(d));
+    el.addEventListener("click", (e) => selectDay(e));
     container.appendChild(el);
   }
 
@@ -90,11 +48,12 @@ function renderCalendar() {
   }
 }
 
-function selectDay(d) {
+// selectDay 함수
+function selectDay(e) {
   document.querySelectorAll(".cal-day").forEach((el) => {
     el.classList.remove("today");
   });
-  event.target.classList.add("today");
+  e.target.classList.add("today"); // e.target으로 받기
 }
 
 renderCalendar();
