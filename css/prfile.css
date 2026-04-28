@@ -134,10 +134,25 @@ body {
 }
 
 /* 상단 헤더 */
+.header {
+  background: var(--purple-400);
+  padding: 87px 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
 .logo {
-  font-size: var(--font-xl);
+  font-size: 20px;
   font-weight: 700;
   color: var(--gray-50);
+}
+
+.header img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
 
 /* 프로필 */
@@ -177,4 +192,137 @@ body {
 .imgbox {
   position: relative;
   margin-bottom: var(--spacing-12);
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.edit {
+  left: 70px;
+  position: absolute;
+  bottom: -6px;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background: var(--purple-400);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit img {
+  width: 20px;
+  height: 20px;
+}
+
+.name {
+  font-size: var(--font-md);
+  font-weight: 700;
+  color: var(--gray-500);
+  margin-bottom: 4px;
+}
+
+.email {
+  font-size: var(--font-sm);
+  color: var(--gray-250);
+}
+
+/* 배너 */
+.banner {
+  background: var(--purple-400);
+  height: 60px;
+}
+
+/* 세팅 */
+.settings {
+  padding: 24px 20px 80px;
+  flex: 1;
+}
+
+.title {
+  margin-top: 10px;
+  font-size: var(--font-xl);
+  font-weight: 700;
+  color: var(--purple-800);
+}
+
+.sub {
+  font-size: var(--font-sm);
+  color: var(--purple-800);
+  margin-bottom: var(--spacing-20);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  padding: 16px 0;
+  font-size: var(--font-sm);
+  color: var(--gray-500);
+  border-bottom: 1px solid var(--gray-100);
+  cursor: pointer;
+}
+
+.item:hover {
+  color: var(--gray-500);
+}
+
+/* 하단 탭바 */
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px 10px 0 0;
+  border-top: 1.5px solid #9f9f9f;
+  background: var(--gray-100);
+  padding: 8px 0 14px;
+  flex-shrink: 0;
+}
+
+.nav-btn {
+  flex: 1;
+  max-width: 80px;
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  color: var(--gray-50);
+  transition: color 0.2s;
+}
+
+.nav-btn.active {
+  border-radius: 12px;
+  background: var(--gray-50);
+  border: 1px solid #f0f0f0;
+}
+
+.nav-btn .icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-btn .icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.nav-btn .lbl {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--purple-900);
 }

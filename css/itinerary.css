@@ -396,44 +396,54 @@ body {
   border: 2px solid var(--purple-400);
 }
 
-/* ---하단 네비게이션--- */
-.nav {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 375px;
-  background: var(--gray-50);
-  border-top: 1px solid #9f9f9f;
+/* 하단 탭바 */
+
+.bottom-nav {
   display: flex;
   justify-content: space-around;
-  padding: 10px 0 16px;
+  border-radius: 10px 10px 0 0;
+  border-top: 1.5px solid #9f9f9f;
+  background: var(--gray-100);
+  padding: 8px 0 14px;
+  flex-shrink: 0;
 }
 
-.nav-item {
-  background: transparent;
+.nav-btn {
+  flex: 1;
+  max-width: 80px;
+  background: none;
   border: none;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-4);
-  font-family: Arial, Helvetica, sans-serif;
+  gap: 3px;
+  cursor: pointer;
+  color: var(--gray-50);
+  transition: color 0.2s;
 }
 
-.nav-item span {
-  font-size: var(--font-sm);
-  color: var(--gray-500);
+.nav-btn.active {
+  border-radius: 12px;
+  background: var(--gray-50);
+  border: 1px solid #f0f0f0;
 }
 
-.nav-item.active span,
-.nav-item .active-text {
-  color: var(--purple-400);
+.nav-btn .icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-btn .icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.nav-btn .lbl {
+  font-size: 11px;
   font-weight: 600;
-}
-
-.nav-item img {
-  width: 20px;
-  height: 20px;
+  color: var(--purple-900);
 }
