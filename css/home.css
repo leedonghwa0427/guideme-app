@@ -117,7 +117,6 @@
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: var(--gray-50);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -445,16 +444,20 @@ body {
 }
 
 /* 하단 탭바 */
+
 .bottom-nav {
   display: flex;
+  justify-content: space-around;
   border-radius: 10px 10px 0 0;
   border-top: 1.5px solid #9f9f9f;
   background: var(--gray-100);
   padding: 8px 0 14px;
   flex-shrink: 0;
 }
+
 .nav-btn {
   flex: 1;
+  max-width: 80px;
   background: none;
   border: none;
   display: flex;
@@ -464,6 +467,12 @@ body {
   cursor: pointer;
   color: var(--gray-50);
   transition: color 0.2s;
+}
+
+.nav-btn.active {
+  border-radius: 12px;
+  background: var(--gray-50);
+  border: 1px solid #f0f0f0;
 }
 
 .nav-btn .icon {
