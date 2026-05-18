@@ -2,8 +2,6 @@
 
 - [노션에서 보기](https://cyber-grain-cff.notion.site/UX-UI-32cf732176aa8034b20ec8600e53a35e?source=copy_link)
 
-- <a herf="https://cyber-grain-cff.notion.site/UX-UI-32cf732176aa8034b20ec8600e53a35e?source=copy_link" target="blank">노션에서 보기 </a>
-
 <div align="center">
 
 # 🔔 Guide Me
@@ -23,9 +21,6 @@ UI/UX Design · Accessibility · Responsive Web
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=111111"/>
 
 <br>
-
-:contentReference[oaicite:0]{index=0}  
-:contentReference[oaicite:1]{index=1}
 
 </div>
 
